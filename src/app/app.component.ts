@@ -16,13 +16,17 @@ export class AppComponent {
   // créer une propriété en boolean
   open: boolean = false;
 
-  // ici une méthode
+  // ici une méthode = function
   onClick() {
-    // console.log('cliqué');
+    console.log('cliqué');
     // if
     // operateur ! = js
     this.open = !this.open;
     console.log(this.open);
+
+    // afficher app-icon-nav ou app-icon-close
+
+
   }
 
 }// NE RIEN ECRIRE APRES DE CETTE LIGNE

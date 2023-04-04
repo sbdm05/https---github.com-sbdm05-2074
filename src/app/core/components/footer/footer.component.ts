@@ -5,6 +5,8 @@ import { Component } from '@angular/core';
   templateUrl: './footer.component.html',
   styleUrls: ['./footer.component.scss']
 })
+
+// angular ajoute un suffixe footer
 export class FooterComponent {
 
 }

@@ -5,17 +5,32 @@
 <!-- composants statiques -->
 <!-- composants dynamiques visibles en fonction de l'url -->
 
-
+<!-- ici on est dans app-root -->
 <header class="fixed-top">
 
   <!-- créer composant header et afficher -->
   <app-header></app-header>
 
-  <button (click)='onClick()'>Ouvrir/Fermer</button>
+  <!-- ajout evenement au clic -->
+  <button (click)='onClick()'>
+      <!-- directive -->
+      <app-icon-nav *ngIf='open'></app-icon-nav>
+      <app-icon-close *ngIf='!open'></app-icon-close>
+
+  </button>
+
+
+  <!-- afficher app-icon-close -->
+
   <!--
     btn.addEventListener('click', function(){})
     .classList.toggle()
    -->
+
+   <!-- j'utilise un composant qui contient une icone burger menu + croix -->
+   <!-- créer module icons -->
+   <!-- créer deux composants à l'intérieur de icons module -->
+
 
 </header>
 <!-- Ici on alterne la classe close-aside en fonction de la valeur de open -->
@@ -30,10 +45,13 @@
   <div class="page">
     <div class="contents">
 
-      contenu
+      <!-- ici on va avoir des composants dynamiques -->
+      <router-outlet></router-outlet>
     </div>
+
     <footer>
       <app-footer>
+
       </app-footer>
     </footer>
   </div>
