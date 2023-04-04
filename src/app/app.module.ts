@@ -6,11 +6,12 @@ import { AppComponent } from './app.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { CoreModule } from './core/core.module';
 import { IconsModule } from './icons/icons.module';
+import { HttpClientModule } from '@angular/common/http';
 
 // decorateur
 @NgModule({
   declarations: [AppComponent],
-  imports: [BrowserModule, AppRoutingModule, NgbModule, CoreModule, IconsModule],
+  imports: [BrowserModule, AppRoutingModule, NgbModule, CoreModule, IconsModule, HttpClientModule],
   providers: [],
   bootstrap: [AppComponent],
 })
