@@ -7,11 +7,12 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { CoreModule } from './core/core.module';
 import { IconsModule } from './icons/icons.module';
 import { HttpClientModule } from '@angular/common/http';
+import { OrdersModule } from './orders/orders.module';
 
 // decorateur
 @NgModule({
   declarations: [AppComponent],
-  imports: [BrowserModule, AppRoutingModule, NgbModule, CoreModule, IconsModule, HttpClientModule],
+  imports: [BrowserModule, AppRoutingModule, NgbModule, CoreModule, IconsModule, HttpClientModule, OrdersModule],
   providers: [],
   bootstrap: [AppComponent],
 })

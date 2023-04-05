@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
+import { Order } from 'src/app/core/models/order';
 
 // decorateur
 @Injectable({
@@ -21,7 +22,8 @@ export class OrdersService {
   }
 
   // appel http
-  public getDatas(){
-    return this.http.get('http://localhost:4009/orders');
+  public getDatas(): Observable<Order[]> {
+    return this.http.get<Order[]>('http://localhost:4009/orders');
   }
+  
 }

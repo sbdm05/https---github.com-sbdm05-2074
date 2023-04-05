@@ -7,11 +7,14 @@ import { ClientsService } from '../../service/clients.service';
   styleUrls: ['./page-list-clients.component.scss'],
 })
 export class PageListClientsComponent {
+
+  public tab!: any
   // constructor + injecter le service Clients
   constructor(private clientsService: ClientsService) {
     // ???? déclencher getDatas()
     this.clientsService.getDatas().subscribe((data) => {
       console.log(data);
+      this.tab = data
     });
   }
 }
