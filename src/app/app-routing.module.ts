@@ -46,6 +46,6 @@ export class AppRoutingModule {
   // afficher le tableau complet des routes
   // injecter / utiliser une fonctionnalité Router
   constructor(private router : Router){
-    console.log(this.router.config, 'tableau de routes')
+    // console.log(this.router.config, 'tableau de routes')
   }
 }
