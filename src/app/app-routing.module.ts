@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { Router, RouterModule, Routes } from '@angular/router';
+import { PageListClientsComponent } from './clients/pages/page-list-clients/page-list-clients.component';
 import { PageAddOrderComponent } from './orders/pages/page-add-order/page-add-order.component';
 import { PageEditOrderComponent } from './orders/pages/page-edit-order/page-edit-order.component';
 
@@ -18,6 +19,16 @@ const routes: Routes = [
   // emprunte une route qui n'existe pas
   // créer module > composant > pagenotfound
   // lazy loading = on ne charge le module que si besoin
+
+  // lazy loading sur le module clients
+  // tester dans le navigateur
+  {
+    path: 'clients',
+    loadChildren: () =>
+      import('./clients/clients.module').then(
+        (m) => m.ClientsModule
+      ),
+  },
   {
     path: '**',
     loadChildren: () =>
