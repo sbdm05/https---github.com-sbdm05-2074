@@ -35,4 +35,18 @@ export class PageListOrdersComponent {
       this.tab = data;
     });
   }
+
+  // créer méthode pour calculer montant HT et TTC
+  // remplacée par le pipe total
+  
+  // public total(val: number, coef: number, tva?: number): number {
+  //   console.log('déclenché');
+
+  //   if (tva) return val * coef * (1 + tva / 100);
+  //   return val * coef;
+  //   // 1200 x 3 x 1.20
+  // }
+
+
+
 }
