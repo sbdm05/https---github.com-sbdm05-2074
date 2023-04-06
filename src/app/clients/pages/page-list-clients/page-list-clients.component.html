@@ -1,4 +1,29 @@
-<p>page-list-clients works!</p>
-<ul>
-  <li *ngFor='let i of tab'>{{i.name}}</li>
-</ul>
+<!-- afficher une propriété dans l'html -->
+<!-- string interpolation -->
+
+
+<!-- afficher le contenu du tableau data -->
+<!-- <ul>
+  <li *ngFor="let item of tab">{{item.client}}</li>
+</ul> -->
+
+<table class="table">
+  <!-- entete du tableau -->
+  <thead>
+    <tr>
+      <th *ngFor='let i of headers' scope="col">{{i}}</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor='let item of tab'>
+      <td>Action</td>
+      <td>{{item.state}}</td>
+      <td>{{item.tva}}</td>
+      <td>{{item.name}}</td>
+      <td>{{item.totalCaHt}}</td>
+      <td>{{item.comment}}</td>
+    </tr>
+
+  </tbody>
+</table>
+
