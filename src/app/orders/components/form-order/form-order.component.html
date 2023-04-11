@@ -38,7 +38,8 @@
       <!-- vous n'avez pas le droit d'itérer dans un enum -->
       <!-- *ngFor ne fonctionne que sur des tableaux -->
       <!-- convertir stateOrder en tableau -->
-      <option *ngFor='let i of stateOrder'>{{ i }}</option>
+      <!-- ici property binding, on associe l'attribut value à la valeur state -->
+      <option *ngFor='let state of stateOrder' [value]='state'>{{ state }}</option>
 
     </select>
   </div>
