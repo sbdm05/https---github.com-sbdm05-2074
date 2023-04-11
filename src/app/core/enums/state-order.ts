@@ -1,7 +1,7 @@
 export enum StateOrder {
   CONFIRMED = "CONFIRMED",
   OPTION = "OPTION",
-  CANCELLED = "CANCELLED"
+  CANCELLED = "CANCELLED",
 }
 
 // enumérer les states possibles : OPTION/CONFIRMED/CANCELLED

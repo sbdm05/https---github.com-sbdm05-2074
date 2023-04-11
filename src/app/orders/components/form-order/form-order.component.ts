@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
+import { StateOrder } from 'src/app/core/enums/state-order';
+import { Order } from 'src/app/core/models/order';
 
 @Component({
   selector: 'app-form-order',
@@ -7,7 +9,13 @@ import { FormBuilder, FormGroup } from '@angular/forms';
   styleUrls: ['./form-order.component.scss'],
 })
 export class FormOrderComponent {
-  public form!: FormGroup;
+  public form!: FormGroup; // non initialisé
+
+  // convertir l'enum en tableau et le stocker dans stateOrder
+  public stateOrder = Object.values(StateOrder);
+
+  // étape : créer un objet de type Order
+  public item: Order = new Order();
 
   constructor(private fb: FormBuilder) {}
 
@@ -20,14 +28,14 @@ export class FormOrderComponent {
   // associer les propriétés aux inputs dans l'HTML
   ngOnInit() {
     this.form = this.fb.group({
-      tjmHt: [1],
-      nbJours: [1],
-      tva: [20],
-      state: ['etat'],
-      typePresta: ['type de presta'],
-      client: ['ici nom client'],
-      comment: ['ici commentaire'],
-      id: [],
+      tjmHt: [this.item.tjmHt],
+      nbJours: [this.item.nbJours],
+      tva: [this.item.tva],
+      state: [this.item.state],
+      typePresta: [this.item.typePresta],
+      client: [this.item.client],
+      comment: [this.item.comment],
+      id: [this.item.id],
     });
   }
 

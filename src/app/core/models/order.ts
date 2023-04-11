@@ -20,7 +20,8 @@ export class Order implements OrderI {
   }
 }
 
-// new Order()
+// const newObj = new Order()
+// newObj va contenir toutes les propriétés et valeurs par défaut du model Order
 
 // Dans mon application, quand je vais créer un objet de type Order,
 // on obtiendra des valeurs par défaut

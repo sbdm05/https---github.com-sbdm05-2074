@@ -34,8 +34,11 @@
     <select class="form-control" formControlName='state'>
       <!-- itérer dans les énums -->
       <!-- importer enum dans ts + stocker-->
-      <!-- ici [value]= property binding avec valeur de i -->
-      <option>OPTION</option>
+
+      <!-- vous n'avez pas le droit d'itérer dans un enum -->
+      <!-- *ngFor ne fonctionne que sur des tableaux -->
+      <!-- convertir stateOrder en tableau -->
+      <option *ngFor='let i of stateOrder'>{{ i }}</option>
 
     </select>
   </div>
