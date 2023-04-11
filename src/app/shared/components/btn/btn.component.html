@@ -2,10 +2,13 @@
 
 <a [ngClass]='styleBtn' [routerLink]='route'>{{ label }}</a>
 
-<!--
+
+<!-- Erreur fréquente
 
 Attention, pour utiliser routerLink, vous devez importer
-
 le module RouterModule dans le module concerné
+
+Can't bind to 'routerLink' since it isn't a known property of 'a'.
+on a oublié d'importer routerLink dans le SharedModule
 
 -->

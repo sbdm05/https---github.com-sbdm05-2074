@@ -15,6 +15,7 @@ const routes: Routes = [
   { path: '', component: PageListOrdersComponent },
   { path: 'add', component: PageAddOrderComponent },
   { path: 'edit', component: PageEditOrderComponent },
+ 
   // charge le module pagenotfound que si l'utilisateur
   // emprunte une route qui n'existe pas
   // créer module > composant > pagenotfound
